@@ -6,12 +6,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends Activity {
 
     private Button _trueButton;
     private Button _falseButton;
+    private Button _nextButton;
+    private TextView _questionTextView;
+    private int _currentIndex = 0;
+
+    private TrueFalse[] _questionBank = new TrueFalse[]{
+        new TrueFalse(R.string.question_oceans, true),
+        new TrueFalse(R.string.question_mideast, false),
+        new TrueFalse(R.string.question_africa, false),
+        new TrueFalse(R.string.question_americas, true),
+        new TrueFalse(R.string.question_asia, true)
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +32,54 @@ public class QuizActivity extends Activity {
 
         _trueButton = (Button) findViewById(R.id.true_button);
         _falseButton = (Button) findViewById(R.id.false_button);
+        _questionTextView = (TextView) findViewById(R.id.question_text_view);
+        _nextButton = (Button) findViewById(R.id.next_button);
+
+        _nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _currentIndex = (_currentIndex + 1) % _questionBank.length;
+
+                updateQuestion();
+            }
+        });
 
         _trueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(QuizActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(true);
             }
         });
 
         _falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(QuizActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(false);
             }
         });
+
+        updateQuestion();
+    }
+
+    private void updateQuestion() {
+        int question = _questionBank[_currentIndex].getQuestion();
+
+        _questionTextView.setText(question);
+    }
+
+    private void checkAnswer(boolean userPressedTrue)
+    {
+        boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
+        int messageResId = 0;
+
+        if (userPressedTrue == answerIsTrue){
+            messageResId = R.string.correct_toast;
+        }
+        else{
+            messageResId = R.string.incorrect_toast;
+        }
+
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
     }
 
     @Override
