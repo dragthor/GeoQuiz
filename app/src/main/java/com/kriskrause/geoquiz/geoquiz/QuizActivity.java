@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,7 +14,8 @@ public class QuizActivity extends Activity {
 
     private Button _trueButton;
     private Button _falseButton;
-    private Button _nextButton;
+    private ImageButton _nextButton;
+    private ImageButton _prevButton;
     private TextView _questionTextView;
     private int _currentIndex = 0;
 
@@ -28,17 +30,32 @@ public class QuizActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_quiz);
 
         _trueButton = (Button) findViewById(R.id.true_button);
         _falseButton = (Button) findViewById(R.id.false_button);
         _questionTextView = (TextView) findViewById(R.id.question_text_view);
-        _nextButton = (Button) findViewById(R.id.next_button);
+        _nextButton = (ImageButton) findViewById(R.id.next_button);
+        _prevButton = (ImageButton) findViewById(R.id.previous_button);
 
         _nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                _currentIndex = (_currentIndex + 1) % _questionBank.length;
+            _currentIndex = (_currentIndex + 1) % _questionBank.length;
+            updateQuestion();
+            }
+        });
+
+        _prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (_currentIndex == 0) {
+                    // Back to the last question.
+                    _currentIndex = _questionBank.length - 1;
+                } else {
+                    _currentIndex = _currentIndex - 1;
+                }
 
                 updateQuestion();
             }
@@ -58,6 +75,14 @@ public class QuizActivity extends Activity {
             }
         });
 
+        _questionTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                _currentIndex = (_currentIndex + 1) % _questionBank.length;
+                updateQuestion();
+            };
+        });
+
         updateQuestion();
     }
 
@@ -67,8 +92,7 @@ public class QuizActivity extends Activity {
         _questionTextView.setText(question);
     }
 
-    private void checkAnswer(boolean userPressedTrue)
-    {
+    private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
         int messageResId = 0;
 
