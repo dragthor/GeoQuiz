@@ -22,6 +22,7 @@ public class QuizActivity extends Activity {
     private ImageButton _prevButton;
     private TextView _questionTextView;
     private int _currentIndex = 0;
+    private boolean _isCheater = false;
 
     private TrueFalse[] _questionBank = new TrueFalse[]{
         new TrueFalse(R.string.question_oceans, true),
@@ -48,6 +49,8 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 _currentIndex = (_currentIndex + 1) % _questionBank.length;
+                _isCheater = false;
+
                 updateQuestion();
             }
         });
@@ -85,7 +88,10 @@ public class QuizActivity extends Activity {
             public void onClick(View view) {
                 Intent cheatIntent = new Intent(QuizActivity.this, CheatActivity.class);
 
-                startActivity(cheatIntent);
+                boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
+
+                cheatIntent.putExtra(CheatActivity.EXTRA_ANSWER_IS_TRUE, answerIsTrue);
+                startActivityForResult(cheatIntent, 0);
             };
         });
 
@@ -100,6 +106,7 @@ public class QuizActivity extends Activity {
         if (savedInstanceState != null) {
             _currentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
         }
+
         updateQuestion();
     }
 
@@ -120,11 +127,15 @@ public class QuizActivity extends Activity {
         boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
         int messageResId = 0;
 
-        if (userPressedTrue == answerIsTrue){
-            messageResId = R.string.correct_toast;
-        }
-        else{
-            messageResId = R.string.incorrect_toast;
+        if (_isCheater) {
+            messageResId = R.string.judgment_toast;
+        } else {
+
+            if (userPressedTrue == answerIsTrue) {
+                messageResId = R.string.correct_toast;
+            } else {
+                messageResId = R.string.incorrect_toast;
+            }
         }
 
         Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
@@ -147,5 +158,14 @@ public class QuizActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {
+            return;
+        }
+
+        _isCheater = data.getBooleanExtra(CheatActivity.EXTRA_ANSWER_IS_SHOWN, false);
     }
 }
