@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class QuizActivity extends Activity {
 
+    private static final String KEY_INDEX = "index";
+
     private Button _trueButton;
     private Button _falseButton;
     private ImageButton _nextButton;
@@ -42,22 +44,22 @@ public class QuizActivity extends Activity {
         _nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            _currentIndex = (_currentIndex + 1) % _questionBank.length;
-            updateQuestion();
+                _currentIndex = (_currentIndex + 1) % _questionBank.length;
+                updateQuestion();
             }
         });
 
         _prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (_currentIndex == 0) {
-                    // Back to the last question.
-                    _currentIndex = _questionBank.length - 1;
-                } else {
-                    _currentIndex = _currentIndex - 1;
-                }
+            if (_currentIndex == 0) {
+                // Back to the last question.
+                _currentIndex = _questionBank.length - 1;
+            } else {
+                _currentIndex = _currentIndex - 1;
+            }
 
-                updateQuestion();
+            updateQuestion();
             }
         });
 
@@ -83,7 +85,17 @@ public class QuizActivity extends Activity {
             };
         });
 
+        if (savedInstanceState != null) {
+            _currentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
         updateQuestion();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putInt(KEY_INDEX, _currentIndex);
     }
 
     private void updateQuestion() {
