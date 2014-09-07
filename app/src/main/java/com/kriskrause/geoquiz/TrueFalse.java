@@ -1,4 +1,4 @@
-package com.kriskrause.geoquiz.geoquiz;
+package com.kriskrause.geoquiz;
 
 public class TrueFalse {
     public int getQuestion() {

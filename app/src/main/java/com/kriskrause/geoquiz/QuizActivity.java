@@ -1,6 +1,7 @@
-package com.kriskrause.geoquiz.geoquiz;
+package com.kriskrause.geoquiz;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ public class QuizActivity extends Activity {
 
     private Button _trueButton;
     private Button _falseButton;
+    private Button _cheatButton;
     private ImageButton _nextButton;
     private ImageButton _prevButton;
     private TextView _questionTextView;
@@ -37,6 +39,7 @@ public class QuizActivity extends Activity {
 
         _trueButton = (Button) findViewById(R.id.true_button);
         _falseButton = (Button) findViewById(R.id.false_button);
+        _cheatButton = (Button) findViewById(R.id.cheat_button);
         _questionTextView = (TextView) findViewById(R.id.question_text_view);
         _nextButton = (ImageButton) findViewById(R.id.next_button);
         _prevButton = (ImageButton) findViewById(R.id.previous_button);
@@ -75,6 +78,15 @@ public class QuizActivity extends Activity {
             public void onClick(View view) {
                 checkAnswer(false);
             }
+        });
+
+        _cheatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cheatIntent = new Intent(QuizActivity.this, CheatActivity.class);
+
+                startActivity(cheatIntent);
+            };
         });
 
         _questionTextView.setOnClickListener(new View.OnClickListener() {
