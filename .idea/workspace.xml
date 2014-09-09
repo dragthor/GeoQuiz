@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a23bdd60-041a-4c5d-b11e-5005780dab2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GeoQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,12 +53,12 @@
       <file leaf-file-name="QuizActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20669292" vertical-offset="1245" max-vertical-offset="2115">
-              <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+            <state vertical-scroll-proportion="2.7125983" vertical-offset="512" max-vertical-offset="2190">
+              <caret line="159" column="41" selection-start-line="159" selection-start-column="41" selection-end-line="159" selection-end-column="41" />
               <folding>
                 <element signature="e#2994#3435#0" expanded="true" />
                 <element signature="e#3423#3424#0" expanded="true" />
-                <element signature="e#4824#4848#0" expanded="true" />
+                <element signature="e#4955#4979#0" expanded="true" />
                 <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
               </folding>
@@ -977,7 +978,7 @@
       <recent name="com.kriskrause.geoquiz.geoquiz" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GeoQuiz:app [assembleDebug]">
+  <component name="RunManager" selected="Android Application.app">
     <configuration default="false" name="GeoQuiz:app [assembleDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1208,7 +1209,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22169812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13327949" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22455573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1262,7 +1263,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4824#4848#0" expanded="true" />
+            <element signature="e#4955#4979#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1286,7 +1287,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4824#4848#0" expanded="true" />
+            <element signature="e#4955#4979#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1450,12 +1451,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20669292" vertical-offset="1245" max-vertical-offset="2115">
-          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+        <state vertical-scroll-proportion="2.7125983" vertical-offset="512" max-vertical-offset="2190">
+          <caret line="159" column="41" selection-start-line="159" selection-start-column="41" selection-end-line="159" selection-end-column="41" />
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4824#4848#0" expanded="true" />
+            <element signature="e#4955#4979#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>

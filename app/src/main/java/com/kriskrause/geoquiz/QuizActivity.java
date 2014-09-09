@@ -132,12 +132,13 @@ public class QuizActivity extends Activity {
 
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
+        boolean cheatedBefore = _questionBank[_currentIndex].hasCheated();
+
         int messageResId = 0;
 
-        if (_isCheater) {
+        if ((userPressedTrue == answerIsTrue) && (_isCheater || cheatedBefore)) {
             messageResId = R.string.judgment_toast;
         } else {
-
             if (userPressedTrue == answerIsTrue) {
                 messageResId = R.string.correct_toast;
             } else {
@@ -174,5 +175,9 @@ public class QuizActivity extends Activity {
         }
 
         _isCheater = data.getBooleanExtra(CheatActivity.EXTRA_ANSWER_IS_SHOWN, false);
+
+        if (_isCheater) {
+            _questionBank[_currentIndex].setHasCheated(true);
+        }
     }
 }
