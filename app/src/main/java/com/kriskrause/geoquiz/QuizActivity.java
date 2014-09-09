@@ -132,11 +132,9 @@ public class QuizActivity extends Activity {
 
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
-        boolean hasCheatedBefore = _questionBank[_currentIndex].hasCheated();
-
         int messageResId = 0;
 
-        if (_isCheater || hasCheatedBefore) {
+        if (_isCheater) {
             _questionBank[_currentIndex].setHasCheated(_isCheater);
 
             messageResId = R.string.judgment_toast;

@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23bdd60-041a-4c5d-b11e-5005780dab2c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/CheatActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/CheatActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/TrueFalse.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/TrueFalse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GeoQuiz.iws" />
@@ -55,13 +53,12 @@
       <file leaf-file-name="QuizActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37204725" vertical-offset="1506" max-vertical-offset="2115">
-              <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+            <state vertical-scroll-proportion="3.277559" vertical-offset="90" max-vertical-offset="2145">
+              <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
               <folding>
                 <element signature="e#2994#3435#0" expanded="true" />
                 <element signature="e#3423#3424#0" expanded="true" />
-                <element signature="method#updateQuestion#0;class#QuizActivity#0" expanded="false" />
-                <element signature="e#4992#5016#0" expanded="true" />
+                <element signature="e#4893#4917#0" expanded="true" />
                 <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
               </folding>
@@ -72,8 +69,8 @@
       <file leaf-file-name="CheatActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/CheatActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1095">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1266,8 +1263,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="method#updateQuestion#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#4992#5016#0" expanded="true" />
+            <element signature="e#4893#4917#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1291,8 +1287,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="method#updateQuestion#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#4992#5016#0" expanded="true" />
+            <element signature="e#4893#4917#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1446,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/CheatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
-          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1095">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1456,13 +1451,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37204725" vertical-offset="1506" max-vertical-offset="2115">
-          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
+        <state vertical-scroll-proportion="3.277559" vertical-offset="90" max-vertical-offset="2145">
+          <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="method#updateQuestion#0;class#QuizActivity#0" expanded="false" />
-            <element signature="e#4992#5016#0" expanded="true" />
+            <element signature="e#4893#4917#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
