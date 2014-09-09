@@ -12,9 +12,13 @@ public class CheatActivity extends Activity {
     public static final String EXTRA_ANSWER_IS_TRUE = "com.kriskrause.geoquiz.answer_is_true";
     public static final String EXTRA_ANSWER_IS_SHOWN = "com.kriskrause.geoquiz.answer_shown";
 
+    private static final String CHEATED_KEY_INDEX = "cheated";
+    private static final String ANSWER_TEXT_INDEX = "answer_text";
+
     private boolean _answerIsTrue;
     private TextView _answerTextView;
     private Button _showAnswer;
+    private boolean _didCheat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +45,27 @@ public class CheatActivity extends Activity {
             }
         });
 
-        setAnswerShownResult(false);
+        if (savedInstanceState != null) {
+            _didCheat = savedInstanceState.getBoolean(CHEATED_KEY_INDEX, false);
+            _answerTextView.setText(savedInstanceState.getString(ANSWER_TEXT_INDEX, ""));
+        }
+
+        setAnswerShownResult(_didCheat);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+        savedInstanceState.putBoolean(CHEATED_KEY_INDEX, _didCheat);
+        savedInstanceState.putString(ANSWER_TEXT_INDEX, _answerTextView.getText().toString());
     }
 
     private void setAnswerShownResult(boolean answerIsShown) {
+        _didCheat = answerIsShown;
+
         Intent data = new Intent();
-        data.putExtra(EXTRA_ANSWER_IS_SHOWN, answerIsShown);
+        data.putExtra(EXTRA_ANSWER_IS_SHOWN, _didCheat);
         setResult(RESULT_OK, data);
     }
 }

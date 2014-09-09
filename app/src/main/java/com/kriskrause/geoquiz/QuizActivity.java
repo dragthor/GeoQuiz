@@ -1,5 +1,6 @@
 package com.kriskrause.geoquiz;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +14,8 @@ import android.widget.Toast;
 
 public class QuizActivity extends Activity {
 
-    private static final String KEY_INDEX = "index";
+    private static final String QUESTION_KEY_INDEX = "index";
+    private static final String CHEATER_KEY_INDEX = "cheater";
 
     private Button _trueButton;
     private Button _falseButton;
@@ -37,6 +39,9 @@ public class QuizActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_quiz);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setSubtitle("Bodies of Water");
 
         _trueButton = (Button) findViewById(R.id.true_button);
         _falseButton = (Button) findViewById(R.id.false_button);
@@ -104,7 +109,8 @@ public class QuizActivity extends Activity {
         });
 
         if (savedInstanceState != null) {
-            _currentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            _currentIndex = savedInstanceState.getInt(QUESTION_KEY_INDEX, 0);
+            _isCheater = savedInstanceState.getBoolean(CHEATER_KEY_INDEX, false);
         }
 
         updateQuestion();
@@ -114,7 +120,8 @@ public class QuizActivity extends Activity {
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
-        savedInstanceState.putInt(KEY_INDEX, _currentIndex);
+        savedInstanceState.putInt(QUESTION_KEY_INDEX, _currentIndex);
+        savedInstanceState.putBoolean(CHEATER_KEY_INDEX, _isCheater);
     }
 
     private void updateQuestion() {
@@ -125,9 +132,13 @@ public class QuizActivity extends Activity {
 
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = _questionBank[_currentIndex].isTrueQuestion();
+        boolean hasCheatedBefore = _questionBank[_currentIndex].hasCheated();
+
         int messageResId = 0;
 
-        if (_isCheater) {
+        if (_isCheater || hasCheatedBefore) {
+            _questionBank[_currentIndex].setHasCheated(_isCheater);
+
             messageResId = R.string.judgment_toast;
         } else {
 
