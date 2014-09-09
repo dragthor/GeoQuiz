@@ -16,6 +16,7 @@ public class QuizActivity extends Activity {
 
     private static final String QUESTION_KEY_INDEX = "index";
     private static final String CHEATER_KEY_INDEX = "cheater";
+    private static final String QUESTION_CHEAT_INDEX = "question_cheat";
 
     private Button _trueButton;
     private Button _falseButton;
@@ -111,6 +112,12 @@ public class QuizActivity extends Activity {
         if (savedInstanceState != null) {
             _currentIndex = savedInstanceState.getInt(QUESTION_KEY_INDEX, 0);
             _isCheater = savedInstanceState.getBoolean(CHEATER_KEY_INDEX, false);
+
+            boolean[] questionCheat = savedInstanceState.getBooleanArray(QUESTION_CHEAT_INDEX);
+
+            for (int i = 0; i < questionCheat.length - 1; i++) {
+                _questionBank[i].setHasCheated(questionCheat[i]);
+            }
         }
 
         updateQuestion();
@@ -122,6 +129,14 @@ public class QuizActivity extends Activity {
 
         savedInstanceState.putInt(QUESTION_KEY_INDEX, _currentIndex);
         savedInstanceState.putBoolean(CHEATER_KEY_INDEX, _isCheater);
+
+        boolean[] questionCheat = new boolean[_questionBank.length];
+
+        for (int i = 0; i < _questionBank.length - 1; i++) {
+            questionCheat[i] = _questionBank[i].hasCheated();
+        }
+
+        savedInstanceState.putBooleanArray(QUESTION_CHEAT_INDEX, questionCheat);
     }
 
     private void updateQuestion() {
