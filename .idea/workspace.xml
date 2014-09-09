@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a23bdd60-041a-4c5d-b11e-5005780dab2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GeoQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,12 +52,12 @@
       <file leaf-file-name="QuizActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.277559" vertical-offset="90" max-vertical-offset="2145">
-              <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.20669292" vertical-offset="1245" max-vertical-offset="2115">
+              <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
               <folding>
                 <element signature="e#2994#3435#0" expanded="true" />
                 <element signature="e#3423#3424#0" expanded="true" />
-                <element signature="e#4893#4917#0" expanded="true" />
+                <element signature="e#4824#4848#0" expanded="true" />
                 <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
               </folding>
@@ -1263,7 +1262,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4893#4917#0" expanded="true" />
+            <element signature="e#4824#4848#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1287,7 +1286,7 @@
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4893#4917#0" expanded="true" />
+            <element signature="e#4824#4848#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>
@@ -1451,12 +1450,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kriskrause/geoquiz/QuizActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.277559" vertical-offset="90" max-vertical-offset="2145">
-          <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.20669292" vertical-offset="1245" max-vertical-offset="2115">
+          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
           <folding>
             <element signature="e#2994#3435#0" expanded="true" />
             <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#4893#4917#0" expanded="true" />
+            <element signature="e#4824#4848#0" expanded="true" />
             <element signature="method#onCreateOptionsMenu#0;class#QuizActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#QuizActivity#0" expanded="false" />
           </folding>

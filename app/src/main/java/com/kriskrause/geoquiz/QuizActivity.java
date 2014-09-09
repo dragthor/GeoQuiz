@@ -135,8 +135,6 @@ public class QuizActivity extends Activity {
         int messageResId = 0;
 
         if (_isCheater) {
-            _questionBank[_currentIndex].setHasCheated(_isCheater);
-
             messageResId = R.string.judgment_toast;
         } else {
 
