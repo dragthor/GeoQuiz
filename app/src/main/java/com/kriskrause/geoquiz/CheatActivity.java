@@ -2,6 +2,7 @@ package com.kriskrause.geoquiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class CheatActivity extends Activity {
     private TextView _answerTextView;
     private Button _showAnswer;
     private boolean _didCheat;
+    private TextView _apiLevelTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class CheatActivity extends Activity {
         _answerIsTrue = getIntent().getBooleanExtra(EXTRA_ANSWER_IS_TRUE, false);
 
         _answerTextView = (TextView) findViewById(R.id.answerTextView);
+
+        _apiLevelTextView = (TextView) findViewById(R.id.apiLevelTextView);
 
         _showAnswer = (Button) findViewById(R.id.showAnswerButton);
 
@@ -44,6 +48,8 @@ public class CheatActivity extends Activity {
                 setAnswerShownResult(true);
             }
         });
+
+        _apiLevelTextView.setText(String.format("%s %s", _apiLevelTextView.getText().toString(), Integer.toString(Build.VERSION.SDK_INT)));
 
         if (savedInstanceState != null) {
             _didCheat = savedInstanceState.getBoolean(CHEATED_KEY_INDEX, false);
